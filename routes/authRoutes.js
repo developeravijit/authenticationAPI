@@ -12,9 +12,7 @@ router.post(
       .notEmpty()
       .withMessage("Name is required")
       .isLength({ min: 2, max: 50 })
-      .withMessage("Name must be between 2 and 50 characters")
-      .matches(/^[A-Za-z\s'-]+$/)
-      .withMessage("Name can only contain letters and spaces"),
+      .withMessage("Name must be between 2 and 50 characters"),
 
     body("email")
       .isEmail()
